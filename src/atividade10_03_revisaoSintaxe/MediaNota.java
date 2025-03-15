@@ -12,7 +12,8 @@ import java.util.Scanner;
 // ATIVIDADE 5
 public class MediaNota {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);   
+        int aluni;
         float media;
         int n_aluno;
         int soma = 0;
