@@ -14,7 +14,7 @@ public class VerificacaoNumeros {
     
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int n1, n2, n3, soma;
+        int n1, n2, n3;
         String valor, valor2, valor3;
         System.out.println("Digite um Número: ");
         n1 = entrada.nextInt();
