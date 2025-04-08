@@ -45,5 +45,6 @@ public class TesteAritmetica {
                 resultado = 0;
         }
         System.out.println("---A opção escolhida: "+opcao+" \n---O resultado é : "+resultado);
+        entrada.close();
     }
 }

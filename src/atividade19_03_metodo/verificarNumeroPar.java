@@ -26,6 +26,6 @@ public class verificarNumeroPar {
             System.out.println("O Número é ímpar");
         }
         
-        
+        entrada.close();
     }
 }

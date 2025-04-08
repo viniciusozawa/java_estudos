@@ -32,10 +32,7 @@ public class TesteConversor {
         temperatura = entrada_dados.nextFloat();
         conversor.realizarConversao(opcao, temperatura);
         
+        entrada_dados.close();
         
-        
-    }
-    
-    
-   
+    } 
 }

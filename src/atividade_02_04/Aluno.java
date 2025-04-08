@@ -21,9 +21,10 @@ public class Aluno {
     }
     
     
-    public void fazerMatricula(){
-        
-        System.out.println("Você foi matriculado");
+    public void fazerMatricula(Aluno matricula){
+        this.matricula = matricula.matricula + 1;
+        System.out.println("\n\n---Matrícula realizada---");
     }
+  
     
 }
