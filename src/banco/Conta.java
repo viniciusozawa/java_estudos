@@ -11,7 +11,8 @@ package banco;
  */
 public class Conta {
     int numero;
-    String cliente;
+    //String cliente;
+    Cliente objCliente; //referência do tipo Cliente == null
     double saldo;
     double limite;
     
@@ -21,7 +22,7 @@ public class Conta {
             this.saldo = this.saldo - quantidade;
             return true;
         } else{
-            System.out.println("Presado"+this.cliente+"Saldo insuficiente. Seu saldo é: "+this.saldo);
+            System.out.println("Presado "+this.objCliente.nome+" Saldo insuficiente. Seu saldo é: "+this.saldo);
             return false;
         }
         

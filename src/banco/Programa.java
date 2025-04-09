@@ -16,9 +16,11 @@ public class Programa {
         Scanner entrada = new Scanner(System.in);
         Conta minhaConta = new Conta();
         Conta outraConta = new Conta();
+        Cliente objClienteJoao = new Cliente();
         
+        minhaConta.objCliente = objClienteJoao; //passando o endereço do objeto criado
         minhaConta.saldo = 10000;
-        minhaConta.cliente = "Vinicius";
+        minhaConta.objCliente.nome = "João Alves";
         minhaConta.saca(10001);
         
         outraConta.deposita(20000);
