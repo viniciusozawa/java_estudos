@@ -21,7 +21,7 @@ Aqui você encontrará diversos exercicíos feitos relacionados aos temas aborda
 
 ## 📌 Observações
 
-Este repositório está em constante atualização conforme o andamento das aulas.
+Este repositório está em constante atualização conforme o andamento das aulas para Acessar os códigos acesse a pasta SRC.
 
 
 
