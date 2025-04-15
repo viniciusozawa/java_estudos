@@ -3,18 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Case;
+package contasPagas;
 
 /**
  *
- * @author 02338079698
+ * @author Usuario
  */
-public class Casa {
-    String definirCor;
-    Porta portaTotal = new Porta();
+public class Produto {
+    String descrisaoProduto;
+    double valorProduto;
     
-    
-    public void pinta(String s, Porta p){
-        this.portaTotal.pinta(s);
-    }
 }

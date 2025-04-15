@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Case;
+package atividade_casa;
 
 /**
  *
@@ -14,12 +14,19 @@ public class Porta {
     String cor;
     double dimensaoX, dimensaoY,dimensaoZ;
     
+    public Porta(){
+        this.dimensaoX = 0.80 ;
+        this.dimensaoY = 2.10;
+        this.dimensaoZ = 0.10;
+    }
+    
+    
     public boolean abrir(){
         return estado = true;
     }
     
     public boolean fechar(){
-        return estado = true;
+        return estado = false;
     }
     
     public void estadoPorta(){
@@ -37,8 +44,6 @@ public class Porta {
     public void exibir(){
         System.out.println("Cor da porta: "+this.cor);
         System.out.println("Dimensão em X: "+this.dimensaoX+" Dimensão em y: "+this.dimensaoY+" Dimensão em z: "+this.dimensaoZ);
-        System.out.print("Status da Porta: ");
-        estadoPorta();
         
     }
     
