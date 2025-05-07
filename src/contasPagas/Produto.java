@@ -10,7 +10,23 @@ package contasPagas;
  * @author Usuario
  */
 public class Produto {
-    String descrisaoProduto;
-    double valorProduto;
+    private String descrisaoProduto;
+    private double valorProduto;
+
+    public String getDescrisaoProduto() {
+        return descrisaoProduto;
+    }
+
+    public void setDescrisaoProduto(String descrisaoProduto) {
+        this.descrisaoProduto = descrisaoProduto;
+    }
+
+    public double getValorProduto() {
+        return valorProduto;
+    }
+
+    public void setValorProduto(double valorProduto) {
+        this.valorProduto = valorProduto;
+    }
     
 }

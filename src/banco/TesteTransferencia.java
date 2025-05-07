@@ -18,8 +18,8 @@ public class TesteTransferencia {
         c2.deposita(7000);
         
         c2.transfere(c1, 500);
-        System.out.println("Saldo da conta do João: "+c1.saldo);
-        System.out.println("Saldo da conta do Pedro: "+c2.saldo);
+        System.out.println("Saldo da conta do João: "+c1.getSaldo());
+        System.out.println("Saldo da conta do Pedro: "+c2.getSaldo());
         
     }
 }

@@ -10,11 +10,23 @@ package banco;
  * @author 02338079698
  */
 public class Conta {
-    int numero;
+    private int numero;
     //String cliente;
     Cliente objCliente; //referência do tipo Cliente == null
-    double saldo;
-    double limite;
+    private double saldo;
+    private double limite;
+    
+    public double getSaldo(){
+        return this.saldo;
+    }
+    
+    public int getNumero(){
+        return this.numero;
+    }
+    
+    public void setNumero( int numero){
+        this.numero = numero;
+    }
     
     public boolean saca(double quantidade){
         if(this.saldo >= quantidade){
@@ -22,7 +34,7 @@ public class Conta {
             this.saldo = this.saldo - quantidade;
             return true;
         } else{
-            System.out.println("Presado "+this.objCliente.nome+" Saldo insuficiente. Seu saldo é: "+this.saldo);
+            System.out.println("Presado "+this.objCliente.getNome()+" Saldo insuficiente. Seu saldo é: "+this.saldo);
             return false;
         }
         

@@ -10,6 +10,22 @@ package contasPagas;
  * @author Usuario
  */
 public class Cliente {
-    String nomeCliente;
-    String cpf;
+    private String nomeCliente;
+    private String cpf;
+
+    public String getNomeCliente() {
+        return nomeCliente;
+    }
+
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 }

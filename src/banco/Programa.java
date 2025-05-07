@@ -18,20 +18,21 @@ public class Programa {
         Conta outraConta = new Conta();
         Cliente objClienteJoao = new Cliente();
         
+        minhaConta.setNumero(10939);
         minhaConta.objCliente = objClienteJoao; //passando o endereço do objeto criado
-        minhaConta.saldo = 10000;
-        minhaConta.objCliente.nome = "João Alves";
+        minhaConta.deposita(10000);
+        minhaConta.objCliente.setNome("João Alves");
         minhaConta.saca(10001);
         
         outraConta.deposita(20000);
         
         //System.out.println("Digite um valor para retirar: ");
         //minhaConta.saca(entrada.nextDouble());
-        System.out.println("Saldo da minha conta: "+minhaConta.saldo);
-        System.out.println("Saldo da outra conta: "+outraConta.saldo);
+        System.out.println("Saldo da minha conta: "+minhaConta.getSaldo());
+        System.out.println("Saldo da outra conta: "+outraConta.getSaldo());
         System.out.println("Endereço da minha conta: "+minhaConta);
         System.out.println("Endereço da outra conta: "+outraConta);
-        
+        System.out.println("Número da conta: "+minhaConta.getNumero());
     }
     
 }
