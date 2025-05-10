@@ -10,14 +10,18 @@ package atividade_casa;
  * @author 02338079698
  */
 public class Porta {
-    boolean estado = false;
-    String cor;
-    double dimensaoX, dimensaoY,dimensaoZ;
+    private boolean estado = false;
+    private String cor;
+    private double dimensaoX, dimensaoY,dimensaoZ;
     
     public Porta(){
         this.dimensaoX = 0.80 ;
         this.dimensaoY = 2.10;
         this.dimensaoZ = 0.10;
+    }
+
+    public boolean isEstado() {
+        return estado;
     }
     
     

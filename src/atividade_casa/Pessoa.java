@@ -12,15 +12,18 @@ import java.util.Date;
  * @author 02338079698
  */
 public class Pessoa {
-    String nome;
-    int idade;
-    double dataAniver;
-//    public void fazAniversarioAno(){
-//        Date niver= new Date();
-//        this.dataAniver = niver.getYear()- this.idade;
-//        System.out.println(""+niver.getYear());
-//    }
-    
+    private String nome;
+    private int idade;
+    private double dataAniver;
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
     public void exibir(){
         System.out.println("Nome: "+this.nome);
         System.out.println("Idade: "+this.idade);

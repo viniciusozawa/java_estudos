@@ -15,14 +15,15 @@ public class TesteFuncionario {
     public static void main(String[] args) {
         Funcionario objf1 = new Funcionario();
         //Date horario = new Date();
+        objf1.setNome("Jofrinho");
+        objf1.setRg("MG-2438103");
+        objf1.setDepartamentoTrabalho("Atendimento ao Público");
         
-        objf1.nome = "Jofrinho";
-        objf1.rg = "MG-2438103";
-        objf1.departamentoTrabalho = "Atendimento ao Público";
-        //objf1.registrandoHorarioEnt(horario.toString(horario.getHours(),horario.getMinutes()), 0);
-        objf1.salario = 1000;
+     
+        objf1.setSalario(1000);
+        
         objf1.aumentoSalario(10);
         
-        System.out.println("Salário ao final do mês: "+objf1.salario);
+        System.out.println("Salário ao final do mês: "+objf1.getSalario());
     }
 }

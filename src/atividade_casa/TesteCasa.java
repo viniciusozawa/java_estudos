@@ -20,9 +20,9 @@ public class TesteCasa {
         Pessoa p1 = new Pessoa();
         
         System.out.println("Digite o Nome do Proprietário: ");
-        p1.nome = entrada.nextLine();
+        p1.setNome(entrada.nextLine());
         System.out.println("Digite sua Idade: ");
-        p1.idade = entrada.nextInt();
+        p1.setIdade(entrada.nextInt());  
         
         casa1.porta1.abrir();
         casa1.porta2.fechar();
