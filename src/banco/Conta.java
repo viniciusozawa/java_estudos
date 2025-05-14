@@ -13,11 +13,44 @@ public class Conta {
     private int numero;
     //String cliente;
     Cliente objCliente; //referência do tipo Cliente == null
+    Cliente objCliContaConjunta;
     private double saldo;
     private double limite;
+    private static int totalDeConta; //static -> pertence a classe 
+    
+    
+    
+    public Conta(){ //Construtor Padrão
+        System.out.println("Construindo uma conta..");
+        Conta.totalDeConta++;
+    }
+
+    public static int getTotalDeConta() {
+        return totalDeConta;
+    }
+    
+    public Conta(double saldo){
+        this();//chama o contrutor padrao
+        this.saldo = saldo;
+    }
+    
+    public Conta(double saldo, double limite, int numero){
+        //this.saldo = saldo;
+        this(saldo);
+        this.limite = limite;
+        this.numero = numero;
+    }
+    
+    public Conta(int numero, Cliente objCliContaConjunta, double saldo, double limite, String getSaldo){
+        this(saldo,limite,numero);//chama o construtor de cima
+        //this.numero = numero
+        this.objCliContaConjunta = objCliContaConjunta;
+        //this.saldo = saldo;
+        //this.numero = saldo;
+    }
     
     public double getSaldo(){
-        return this.saldo;
+        return this.saldo + this.limite;
     }
     
     public int getNumero(){

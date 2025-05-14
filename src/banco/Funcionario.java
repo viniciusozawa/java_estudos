@@ -13,6 +13,25 @@ public class Funcionario {
     private String nome, departamentoTrabalho, dataEntradaBanco, rg;
     private double salario;
     private boolean registroNaCarteira;
+    private int identificador;
+    private static int id = 1;
+   
+    
+    public Funcionario(){
+        this.registroNaCarteira = true;
+        this.identificador = Funcionario.id++;  
+        
+    }
+
+    public Funcionario(String nome , String departamentoTrabalho, String dataEntradaBanco, String rg){
+        this();
+        this.nome = nome;
+        this.departamentoTrabalho = departamentoTrabalho;
+        this.dataEntradaBanco = dataEntradaBanco;
+        this.rg = rg;
+        
+    }
+    
 
     public String getNome() {
         return nome;
@@ -61,12 +80,19 @@ public class Funcionario {
     public void setRegistroNaCarteira(boolean registroNaCarteira) {
         this.registroNaCarteira = registroNaCarteira;
     }
+
+    public int getIdentificador() {
+        return identificador;
+    }
+
+    
     
     public void mostrarDadosFuncionario(){
         System.out.println("Nome: "+this.nome);
         System.out.println("Departamento onde atua: "+this.departamentoTrabalho);
         System.out.println("Data de entrada(registrador eletrônico): "+this.dataEntradaBanco);
         System.out.println("Registro Geral(rg): "+this.rg);
+        System.out.println("ID: "+this.identificador);
     }
 
     public void registrandoHorarioEnt(String horario, double verhorario){
