@@ -92,6 +92,7 @@ public class Funcionario {
         System.out.println("Departamento onde atua: "+this.departamentoTrabalho);
         System.out.println("Data de entrada(registrador eletrônico): "+this.dataEntradaBanco);
         System.out.println("Registro Geral(rg): "+this.rg);
+        System.out.println("Salário: "+this.salario);
         System.out.println("ID: "+this.identificador);
     }
 
@@ -108,6 +109,10 @@ public class Funcionario {
     
     public boolean demitirFuncionario(){
         return registroNaCarteira = false;
+    }
+    
+    public double getBonificacao(){
+        return this.salario * 0.10;
     }
     
 }

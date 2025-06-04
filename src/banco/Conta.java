@@ -12,8 +12,7 @@ package banco;
 public class Conta {
     private int numero;
     //String cliente;
-    Cliente objCliente; //referência do tipo Cliente == null
-    Cliente objCliContaConjunta;
+    Cliente cliente;
     private double saldo;
     private double limite;
     private static int totalDeConta; //static -> pertence a classe 
@@ -41,10 +40,10 @@ public class Conta {
         this.numero = numero;
     }
     
-    public Conta(int numero, Cliente objCliContaConjunta, double saldo, double limite, String getSaldo){
+   public Conta(int numero, Cliente cliente, double saldo, double limite){
         this(saldo,limite,numero);//chama o construtor de cima
         //this.numero = numero
-        this.objCliContaConjunta = objCliContaConjunta;
+        this.cliente = cliente;
         //this.saldo = saldo;
         //this.numero = saldo;
     }
@@ -67,7 +66,7 @@ public class Conta {
             this.saldo = this.saldo - quantidade;
             return true;
         } else{
-            System.out.println("Presado "+this.objCliente.getNome()+" Saldo insuficiente. Seu saldo é: "+this.saldo);
+            System.out.println("Presado "+this.cliente.getNome()+" Saldo insuficiente. Seu saldo é: "+this.saldo);
             return false;
         }
         
@@ -75,7 +74,7 @@ public class Conta {
     
     public void deposita(double quantidade){
         if(quantidade > 0 ){
-            this.saldo = this.saldo + quantidade; 
+            this.saldo += quantidade; 
         } else if (quantidade == 0 ){
             System.out.println("O número é nulo");
         } else{
@@ -90,6 +89,10 @@ public class Conta {
             System.out.println("Saldo insuficiente");
         }
         
+    }
+    
+    public void atualiza(double taxa) {
+        this.saldo += this.saldo * taxa;
     }
     
 }
