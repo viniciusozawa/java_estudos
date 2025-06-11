@@ -31,6 +31,9 @@ public class Funcionario {
         this.rg = rg;
         
     }
+    public Funcionario(String nome){
+        this.nome = nome;
+    }
     
 
     public String getNome() {

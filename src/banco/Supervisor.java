@@ -11,10 +11,15 @@ package banco;
  */
 public class Supervisor extends Funcionario{
     
+    public Supervisor(String nome) {
+        super(nome);
+    }
     
     @Override
     public double getBonificacao() {
         return this.getSalario() * 0.12; 
     }
+
+    
     
 }
