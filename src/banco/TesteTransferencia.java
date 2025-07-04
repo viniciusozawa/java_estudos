@@ -11,8 +11,8 @@ package banco;
  */
 public class TesteTransferencia {
     public static void main(String[] args) {
-        Conta c1 = new Conta();
-        Conta c2 = new Conta();
+        Conta c1 = new ContaCorrente();
+        Conta c2 = new ContaCorrente();
         
         c1.deposita(4000);
         c2.deposita(7000);

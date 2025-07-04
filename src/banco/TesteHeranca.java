@@ -11,7 +11,7 @@ package banco;
  */
 public class TesteHeranca {
     public static void main(String[] args) {
-        Funcionario objfuncionario = new Funcionario();
+        Funcionario objfuncionario = new Gerente();
         objfuncionario.setNome("Tulio");
         objfuncionario.setSalario(10000);
         
@@ -21,7 +21,7 @@ public class TesteHeranca {
         objGerente.setSenha(123);
         objGerente.autentica(123);
         
-        Funcionario objSupervisor = new Supervisor();
+        Funcionario objSupervisor = new Supervisor("jose");
         objSupervisor.setNome("Pedro");
         objSupervisor.setSalario(12000);
         

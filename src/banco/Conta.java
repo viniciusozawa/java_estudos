@@ -9,7 +9,7 @@ package banco;
  *
  * @author 02338079698
  */
-public class Conta {
+public abstract class Conta {
     private int numero;
     //String cliente;
     Cliente cliente;
@@ -91,8 +91,6 @@ public class Conta {
         
     }
     
-    public void atualiza(double taxa) {
-        this.saldo += this.saldo * taxa;
-    }
+    public abstract void atualiza(double taxaSelic);
     
 }

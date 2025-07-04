@@ -50,9 +50,7 @@ public class Gerente extends Funcionario{ //torno a classe Gerente filha de func
 
     @Override
     public double getBonificacao() {
-        
-        
-        return super.getBonificacao() + 1000; 
+        return this.getSalario() * 0.15;
     }
     
     

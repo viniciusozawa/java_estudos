@@ -9,7 +9,7 @@ package banco;
  *
  * @author 02338079698
  */
-public class Funcionario {
+public abstract class Funcionario {
     private String nome, departamentoTrabalho, dataEntradaBanco, rg;
     private double salario;
     private boolean registroNaCarteira;
@@ -114,8 +114,6 @@ public class Funcionario {
         return registroNaCarteira = false;
     }
     
-    public double getBonificacao(){
-        return this.salario * 0.10;
-    }
+    public abstract double getBonificacao();
     
 }

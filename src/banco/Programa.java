@@ -14,14 +14,14 @@ import java.util.Scanner;
 public class Programa {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        Conta minhaConta = new Conta();
-        Conta outraConta = new Conta();
-        Cliente objClienteJoao = new Cliente();
+        Conta minhaConta = new ContaPoupanca();
+        Conta outraConta = new ContaCorrente();
+       // Cliente objClienteJoao = new Cliente();
         
         minhaConta.setNumero(10939);
-        minhaConta.objCliente = objClienteJoao; //passando o endereço do objeto criado
+        //minhaConta.objCliente = objClienteJoao; //passando o endereço do objeto criado
         minhaConta.deposita(10000);
-        minhaConta.objCliente.setNome("João Alves");
+        //minhaConta.objCliente.setNome("João Alves");
         minhaConta.saca(10001);
         
         outraConta.deposita(20000);
