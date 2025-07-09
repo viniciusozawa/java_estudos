@@ -9,7 +9,7 @@ package banco;
  *
  * @author 02338079698
  */
-public class ContaCorrente extends Conta{
+public class ContaCorrente extends Conta implements Tributavel{
     
     @Override
     public void atualiza(double taxa) {
@@ -19,5 +19,10 @@ public class ContaCorrente extends Conta{
     @Override
     public void deposita(double valor) {
         super.deposita(valor - 1 );
+    }
+
+    @Override
+    public double calcularTributavel() {
+        return this.getSaldo() * 0.01;
     }
 }

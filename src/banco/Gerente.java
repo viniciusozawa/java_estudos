@@ -9,10 +9,10 @@ package banco;
  *
  * @author 02338079698
  */
-public class Gerente extends Funcionario{ //torno a classe Gerente filha de funcionario
+public class Gerente extends Funcionario implements Autenticavel{ //torno a classe Gerente filha de funcionario
    
     private int senha;
-    private int numeroDeFuncionarioGerenciadas;
+  
 
     public Gerente() {
     }
@@ -30,14 +30,9 @@ public class Gerente extends Funcionario{ //torno a classe Gerente filha de func
         this.senha = senha;
     }
 
-    public int getNumeroDeFuncionarioGerenciadas() {
-        return numeroDeFuncionarioGerenciadas;
-    }
 
-    public void setNumeroDeFuncionarioGerenciadas(int numeroDeFuncionarioGerenciadas) {
-        this.numeroDeFuncionarioGerenciadas = numeroDeFuncionarioGerenciadas;
-    }
     
+    @Override
     public boolean autentica(int senha){
         if(this.senha == senha){
             System.out.println("Acesso Permitido");
@@ -52,6 +47,14 @@ public class Gerente extends Funcionario{ //torno a classe Gerente filha de func
     public double getBonificacao() {
         return this.getSalario() * 0.15;
     }
+
+    @Override
+    public void relatorioAutenticacao() {
+        System.out.println("Relatório da Autenticação do Gerente");
+        System.out.println("Nome: "+this.getNome());
+        System.out.println("outros dados");
+    }
+    
     
     
 }
