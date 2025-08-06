@@ -10,7 +10,7 @@ package banco;
  * @author 02338079698
  */
 public class TesteTransferencia {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ValorInvalidoException {
         Conta c1 = new ContaCorrente();
         Conta c2 = new ContaCorrente();
         

@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author 02338079698
  */
 public class Programa {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ValorInvalidoException {
         Scanner entrada = new Scanner(System.in);
         Conta minhaConta = new ContaPoupanca();
         Conta outraConta = new ContaCorrente();

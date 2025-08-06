@@ -11,7 +11,7 @@ package banco;
  */
 public class TesteConta {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ValorInvalidoException {
 
         Conta c = new ContaCorrente();
         ContaCorrente cc = new ContaCorrente();

@@ -10,16 +10,15 @@ package banco;
  * @author 02338079698
  */
 public abstract class Conta {
+
     private int numero;
     //String cliente;
     Cliente cliente;
     private double saldo;
     private double limite;
     private static int totalDeConta; //static -> pertence a classe 
-    
-    
-    
-    public Conta(){ //Construtor Padrão
+
+    public Conta() { //Construtor Padrão
         System.out.println("Construindo uma conta..");
         Conta.totalDeConta++;
     }
@@ -27,70 +26,67 @@ public abstract class Conta {
     public static int getTotalDeConta() {
         return totalDeConta;
     }
-    
-    public Conta(double saldo){
+
+    public Conta(double saldo) {
         this();//chama o contrutor padrao
         this.saldo = saldo;
     }
-    
-    public Conta(double saldo, double limite, int numero){
+
+    public Conta(double saldo, double limite, int numero) {
         //this.saldo = saldo;
         this(saldo);
         this.limite = limite;
         this.numero = numero;
     }
-    
-   public Conta(int numero, Cliente cliente, double saldo, double limite){
-        this(saldo,limite,numero);//chama o construtor de cima
+
+    public Conta(int numero, Cliente cliente, double saldo, double limite) {
+        this(saldo, limite, numero);//chama o construtor de cima
         //this.numero = numero
         this.cliente = cliente;
         //this.saldo = saldo;
         //this.numero = saldo;
     }
-    
-    public double getSaldo(){
+
+    public double getSaldo() {
         return this.saldo + this.limite;
     }
-    
-    public int getNumero(){
+
+    public int getNumero() {
         return this.numero;
     }
-    
-    public void setNumero( int numero){
+
+    public void setNumero(int numero) {
         this.numero = numero;
     }
-    
-    public boolean saca(double quantidade){
-        if(this.saldo >= quantidade){
+
+    public boolean saca(double quantidade) {
+        if(quantidade < 0){
+            throw new IllegalArgumentException();
             
-            this.saldo = this.saldo - quantidade;
+        }else{
+            this.saldo += quantidade - 0.10;
             return true;
-        } else{
-            System.out.println("Presado "+this.cliente.getNome()+" Saldo insuficiente. Seu saldo é: "+this.saldo);
-            return false;
         }
-        
+
     }
-    
-    public void deposita(double quantidade){
-        if(quantidade > 0 ){
-            this.saldo += quantidade; 
-        } else if (quantidade == 0 ){
-            System.out.println("O número é nulo");
-        } else{
-            System.out.println("O número é negativo");
+
+       void deposita(double valor) throws ValorInvalidoException {
+        if (valor < 0) {
+        throw new ValorInvalidoException(valor);
+        } else {
+            this.saldo += valor - 0.10;
         }
     }
-    
-    public void transfere(Conta destino , double valor){
-        if(this.saca(valor)== true){
-            destino.deposita(valor);
-        } else{
-            System.out.println("Saldo insuficiente");
+
+    public void transfere(Conta destino, double quantidade) throws ValorInvalidoException {
+        if (this.saldo >= quantidade) {
+            this.saca(quantidade);
+            destino.deposita(quantidade);
+        } else {
+            System.out.println("Quantidade de saque insuficiente, seu saldo atual: " + this.getSaldo() + " Quantidade transferida canceleda, quantidade: " + quantidade);
         }
-        
     }
     
     public abstract void atualiza(double taxaSelic);
-    
+
 }
